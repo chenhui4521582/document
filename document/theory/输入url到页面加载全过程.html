@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入url到页面加载全过程</title>
+</head>
+<body>
+<!--
+    1.解析域名
+      1-1:通过dns把域名解析成ip;(经过浏览器缓存,系统缓存,路由缓存,运营商缓存一级一级往上查找,直到查到ip);
+      1-2:应用层生产http报文; (内容: HOST , Connection ,Upgrade-Insecure-Requests ,chrome ,Accept,X-Client-Data,Accept-Encoding,Accept-Language)
+      1-3:传输层建立tcp-ip连接  (tcp-ip3次握手);
+          注意:构建tcp会增加大量网络延迟; 优化:1.合并请求 2.多使用缓存减少网络请求 3:建立永久缓存 4:使用多域名增加资源并发加载数
+      1-4:服务器处理返回数据;
+      1-5:浏览器渲染
+          html渲染 {
+                1.解码: 将服务器传回来的字符流 ,解码为unicode字符
+                2.分词: 将unicode 字符切分一个一个的tokens
+                3.解析: 根据tokens 创建相应 节点
+                4.建树: 将节点关联在一起，创建dom树
+          }
+
+          css渲染:解析 cssStyleSheet 并且 cssrule 匹配到dom树上
+
+          js渲染:
+
+          重绘: 改变元素的视觉属性时叫重绘
+
+          回流,重排: 窗口尺寸被改变,一个元素的尺寸发生改变触发浏览器重新进行流式布局的过程;
+
+
+
+-->
+</body>
+</html>

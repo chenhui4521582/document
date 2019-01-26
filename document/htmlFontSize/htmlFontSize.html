@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>htmlFontSize</title>
+</head>
+<body>
+<script>
+(function (d,w) {
+    var documentEvent = d.documentElement,
+        resize = 'orientationchange' in w ? 'orientationchange' : 'resize',
+        resizeFn = function () {
+            var clientWidth = documentEvent.clientWidth;
+            if(clientWidth&&clientWidth>=750){
+                documentEvent.style.fontSize = '100px';
+            }else{
+            	documentEvent.style.fontSize = 100 * (clientWidth/750) + 'px'
+            }
+        }
+    if(d.addEventListener){
+    	resizeFn();
+    	d.addEventListener(resize,resizeFn,false)
+    }
+})(document,window)
+</script>
+</body>
+</html>

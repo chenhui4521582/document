@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js运行机制</title>
+</head>
+<body>
+<script>
+    /**
+     *  js  运行机制
+     *  js 是单线程的执行环境, 分为同步任务和异步任务；
+     *  js 运行的时候会生成`执行栈`,跟`异步任务队列`；
+     *  js 运行主线程的代码的时候，会以此执行执行栈内的代码；
+     *  当执行栈内的代码执行完毕的时候，会去访问异步任务队列，
+     *  看有哪些异步任务完成了可以执行回调了，并把这些异步任务的回到函数
+     *  放到执行栈内执行。
+     *  异步任务是先进先出，后进后出的 队列
+     */
+
+    function example(){
+        setTimeout(function(){
+            console.log(1);
+        },0)
+        console.log(2);
+        new Promise(function haha (resolve,reject) {
+            for(var i = 0;i<100;i++){
+                if(i == 99){
+                    resolve();
+                }
+            }
+            console.log(3)
+        }).then(res=>{
+            console.log(4)
+        })
+        console.log(5);
+    }
+    example();
+
+    function example1(){
+        for(var i=0; i<5; i++){
+            setTimeout(function(){
+                console.log(i)
+            },1000)
+        }
+    }
+    // 5个5
+    // example1()
+    function example2(){
+        for(var B=0; B<5; B++){
+            setTimeout(function(B){
+                console.log(B)
+            }(B),1000)
+        }
+    }
+//    example2()
+
+
+    function example3(){
+        for(var B=0; B<5; B++){
+            (function(B){
+                setTimeout(function(){
+                    console.log(B)
+                },1000)
+            })(B)
+        }
+    }
+    example3()
+
+</script>
+</body>
+</html>

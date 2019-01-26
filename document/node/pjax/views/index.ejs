@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pjax</title>
+    <style>
+        *{padding: 0;margin: 0;color: #fff;}
+        a{color: #fff;text-decoration:none;}
+        .layout{background: #ccc;width: 1000px;margin: 0 auto;border-radius: 10px;overflow: hidden;}
+        .header{overflow: hidden;}
+        .header a{display: block;padding: 10px 0;float:left;width:20%;height: 30px;line-height:30px;text-align: center;background: #009BFE;}
+        .content{height: 500px;background: #28a4c9;padding: 20px;}
+    </style>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/pjax.js"></script>
+
+</head>
+<body>
+<div class="layout">
+    <div class="header">
+        <a href="/indexPjax/?id=1">pjax1</a>
+        <a href="/indexPjax/?id=2">pjax2</a>
+        <a href="/indexPjax/?id=3">pjax3</a>
+        <a href="/indexPjax/?id=4">pjax4</a>
+        <a href="/indexPjax/?id=5">pjax5</a>
+    </div>
+    <div class="content">
+
+    </div>
+</div>
+<script>
+    $(document).pjax('.header a', '.content')
+
+
+//    $('.header a').click(function(){
+//        var url = $(this).attr('href')
+//        $.ajax({
+//            url: url,
+//            type:'GET',
+//            headers:{'pjax':true},
+//            success:function(res){
+//                console.log(res);
+//            }
+//        })
+//    })
+</script>
+</body>
+</html>

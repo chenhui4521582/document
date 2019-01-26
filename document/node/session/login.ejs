@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            font-size:12px;
+            font-family: "microsoft yahei";
+            outline: none;
+        }
+
+        html, body {
+            height: 100%;
+            background:#00ceff;
+        }
+        .layout{
+            margin: 150px auto 0;
+            width: 300px;
+            background: #ccc;
+            overflow: hidden;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .mr{
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        em{
+            display: block;
+            float: left;
+            padding-right: 15px;
+            text-align: right;
+            width:65px;
+            height: 30px;
+            line-height: 30px;
+            font-style: normal;
+        }
+        input{
+            display: block;
+            padding-left: 5px;
+            float: left;
+            width: 215px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+        }
+        button{display: block;margin-left: 32px;width: 50px;text-align: center;height: 30px;background: #00b3ee;border-radius: 5px;border:none;}
+    </style>
+</head>
+<body>
+<div class="layout">
+    <form action="http://127.0.0.1:3000/login/sub" method="post">
+        <div class="mr">
+            <em>用户名:</em>
+            <input type="text" name="username" placeholder="请输入用户名"/>
+        </div>
+        <div class="mr">
+            <em>密码:</em>
+            <input type="password" name="password" placeholder="请输入密码"/>
+        </div>
+        <div class="mr">
+            <button type="submit">登录</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
