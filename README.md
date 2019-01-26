@@ -1,8 +1,9 @@
 # example
 <div align=center><img src="https://github.com/chenhui4521582/document/blob/master/readme_img.jpg" alt="图片加载失败时，显示这段字"/><div>
 
+<div align=left>
 ============================================
-
+###########目录结构描述
 ├── document                          // js 实例
 │ 
 ├── react                             // react 实例
@@ -19,3 +20,4 @@
 │   ├── vve-ui                        // 提交到npm 的全局组件库
 │   └── webpack_devserver_vue         // 使用webpack devserver 搭建的vue 环境跟项目
 └── node                          // node 实例
+<div>
