@@ -20,5 +20,5 @@ DOCUMENT
 │   ├── vue-602                       // 602游戏项目  
 │   ├── vue-cli3                      // 基于脚手架cli3 的实例  
 │   ├── vve-ui                        // 提交到npm 的全局组件库  
-│   └── webpack_devserver_vue         // 使用webpack devserver 搭建的vue 环境跟项目
+│   └── webpack_devserver_vue         // 使用webpack devserver 搭建的vue 环境跟项目  
 └── node                              // node 实例
