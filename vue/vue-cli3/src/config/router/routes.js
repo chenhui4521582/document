@@ -20,6 +20,12 @@ import module from '@view/vuex/module.vue'
 import slot from '@view/vue/v-slot/v-slot.vue'
 import vModel from '@view/vue/v-model/v-model.vue'
 import vComponent from '@view/vue/v-component/v-component.vue'
+import vTransition from '@view/vue/v-transition/v-transition.vue'
+
+import examplesSelectPage from '@view/examples/select-page/selectPage.vue'
+import loginEnter from '@view/examples/login-enter/LoginEnter.vue'
+import my from '@view/examples/login-enter/components/my.vue'
+import login from '@view/examples/login-enter/components/login.vue'
 const routes = [
   {
     path: '/',
@@ -112,6 +118,49 @@ const routes = [
         path: '/vue/v-component',
         name: 'v-component',
         component: vComponent
+      },
+      {
+        path: '/vue/v-transition',
+        name: 'v-transition',
+        component: vTransition
+      }
+    ]
+  },
+  {
+    path: '/examples',
+    component: childBox,
+    children: [
+      {
+        path: '/examples/selectPage',
+        name: 'examples-selectPage',
+        component: examplesSelectPage
+      },
+      {
+        path: '/examples/loginEnter/',
+        component: childBox,
+        children: [
+          {
+            path: '/',
+            name: 'loginEnter',
+            component: loginEnter
+          },
+          {
+            path: '/examples/loginEnter/my',
+            name: 'my',
+            component: my,
+            meta: {
+              login: true
+            }
+          },
+          {
+            path: '/examples/loginEnter/login',
+            name: 'login',
+            component: login,
+            meta: {
+              login: true
+            }
+          }
+        ]
       }
     ]
   }

@@ -1,3 +1,4 @@
+const ENV = process.env.NODE_ENV;
 const configureWebpack = {
   devServer: {
     open: true
@@ -9,7 +10,8 @@ const configureWebpack = {
       '@components': '@/components',
       '@util': '@/util'
     }
-  }
+  },
+  devtool: 'cheap-module-eval-source-map'
 }
 
 module.exports = {

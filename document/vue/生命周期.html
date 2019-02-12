@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+<script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+<script>
+  // beforeCreate
+  // created
+  // beforeMount
+  // mounted
+  // beforeUpdate
+  // updated
+  // beforeDestroy
+  // destroyed
+  var layout = {
+	template: `<div class="layout">
+                <p>数据:{{msg}}</p>
+                <button @click="updateMsg">更新数据</button>
+
+                </div>`,
+	data: function(){
+	  return {
+		msg: '11111'
+	  }
+	},
+    methods: {
+
+      updateMsg: function(){
+	    this.msg = '2222222'
+      }
+
+    },
+	beforeCreate: function() {
+	  console.log('--------组件创建之前');
+	  console.log(this.$data);   // undefined
+	  console.log(this.msg);   // undefined
+	  console.log(this.$el);   // undefined
+	},
+	created: function(){
+	  console.log('--------组件创建之后');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el);   //undefined
+	},
+	beforeMount: function(){
+	  console.log('--------组件挂载之前');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el);   //undefined
+	},
+	mounted: function(){
+	  console.log('--------组件挂载之后');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el);   // true
+	},
+	beforeUpdate: function (){
+	  console.log('--------组件更新之前');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el.innerHTML);   // true
+	},
+	updated: function (){
+	  console.log('--------组件更新之后');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el.innerHTML);   // true
+	},
+	beforeDestroy: function(){
+	  console.log('--------组件卸载之前');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el);   // true
+	},
+	destroyed: function (){
+	  console.log('--------组件卸载之后');
+	  console.log(this.$data);  // true
+	  console.log(this.msg);   // true
+	  console.log(this.$el);   // true
+	},
+	activated: function (){
+	  console.log('--------组件被激活了');
+	}
+  }
+
+
+  new Vue({
+    el: '#app',
+    template: `<div>
+                <keep-alive><layout v-if="show"/></keep-alive>
+                <button @click="toggleShow">显示隐藏</button>
+               </div>`,
+    data: function(){
+      return{
+		show: true
+      }
+    },
+    components: {
+      layout
+    },
+    methods: {
+	  toggleShow: function(){
+		this.show = !this.show
+	  },
+    }
+  })
+
+
+
+</script>
+</body>
+</html>

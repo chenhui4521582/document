@@ -23,7 +23,7 @@ export default {
       setFps:'actionsSetFps'
     }),
     init () {
-
+      console.log('root view')
     },
     Fps () {
 
@@ -38,6 +38,8 @@ export default {
 
 <style lang="less">
   * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     .font-size(28);
   }

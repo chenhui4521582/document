@@ -1,10 +1,7 @@
 <template>
 <div class="filters">
   <p class="back"><router-link to="/">返回</router-link></p>
-  <p class="title">
-    vuex   filter
-  </p>
-  <p class="border-bottom">
+  <p class="title border-bottom">
     说明: 全局过滤 filters
   </p>
   <p>例子：</p>

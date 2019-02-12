@@ -1,8 +1,4 @@
 import Axios from 'axios'
-import qr from 'querystring'
-var location = window.location.href
-
-console.log(qr.parse(location))
 
 Axios.interceptors.request.use(function (config) {
   // config.headers.Authorization = queryUrl.token // 设置token

@@ -1,5 +1,5 @@
 <template>
-  <div :class="[visible ? 'modal modal-in' : 'modal']" v-show="visible">
+  <div :class="[visible ? 'modal modal-in' : 'vee-modal.vue']" v-show="visible">
     <div class="caver" @click="modalCancel"></div>
     <div class="modal-dialog">
       <div class="modal-content">

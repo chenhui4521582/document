@@ -18,22 +18,22 @@ export default {
   name: 'toast',
   methods: {
     toast () {
-      this.$toast.show('show', 200000)
+      this.$veeToast.show('show', 200000)
     },
     success () {
-      this.$toast.success('success', 2000)
+      this.$veeToast.success('success', 2000)
     },
     warning () {
-      this.$toast.warning('warning', 2000)
+      this.$veeToast.warning('warning', 2000)
     },
     error () {
-      this.$toast.error('error', 2000)
+      this.$veeToast.error('error', 2000)
     },
     loading () {
-      this.$toast.loading('loading', 2000)
+      this.$veeToast.loading('loading', 2000)
     },
     closed () {
-      this.$toast.close()
+      this.$veeToast.close()
     }
   }
 }

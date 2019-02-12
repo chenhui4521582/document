@@ -10,20 +10,22 @@
     <p>
       <button @click="openModal">显示modal</button>
     </p>
-    <Modal
+    <vee-modal
       :visible="visible"
       :options="options"
       v-on:modalCancel="modalCancel"
       v-on:modalConfirm="modalConfirm"
     >
       <p slot="body">测试测试测试内容</p>
-    </Modal>
+    </vee-modal>
   </div>
 </template>
 
 <script>
+import VeeModal from "../../../../vee-ui/src/components/vee-modal/vee-modal";
 export default {
   name: 'modal',
+  components: {VeeModal},
   data: () => ({
     visible: false,
     options: {}

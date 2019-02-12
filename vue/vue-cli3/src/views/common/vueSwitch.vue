@@ -1,13 +1,8 @@
 <template>
-  <section>
-    <VueSwitch v-model="show" />
-    <p>{{show}}</p>
-  </section>
+  <vee-switch v-model="show"/>
 </template>
 
 <script>
-import { VueSwitch } from '@components/'
-
 export default {
   name: 'vueSwitch',
   data: () => ({
