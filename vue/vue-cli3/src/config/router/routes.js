@@ -21,11 +21,15 @@ import slot from '@view/vue/v-slot/v-slot.vue'
 import vModel from '@view/vue/v-model/v-model.vue'
 import vComponent from '@view/vue/v-component/v-component.vue'
 import vTransition from '@view/vue/v-transition/v-transition.vue'
+import vCreateElement from '@view/vue/v-createElement/v-createElement'
 
 import examplesSelectPage from '@view/examples/select-page/selectPage.vue'
 import loginEnter from '@view/examples/login-enter/LoginEnter.vue'
 import my from '@view/examples/login-enter/components/my.vue'
 import login from '@view/examples/login-enter/components/login.vue'
+import examplesCountdown from '@view/examples/countdown/countdown.vue'
+import examplesIframe from '@view/examples/iframe/iframe.vue'
+import examplesCity from '@view/examples/city/city.vue'
 const routes = [
   {
     path: '/',
@@ -123,6 +127,11 @@ const routes = [
         path: '/vue/v-transition',
         name: 'v-transition',
         component: vTransition
+      },
+      {
+        path: '/vue/v-createElement',
+        name: 'v-createElement',
+        component: vCreateElement
       }
     ]
   },
@@ -161,6 +170,21 @@ const routes = [
             }
           }
         ]
+      },
+      {
+        path: '/examples/countdown',
+        name: 'examples-countdown',
+        component: examplesCountdown
+      },
+      {
+        path: '/examples/iframe',
+        name: 'examples-iframe',
+        component: examplesIframe
+      },
+      {
+        path: '/examples/city',
+        name: 'examples-city',
+        component: examplesCity
       }
     ]
   }

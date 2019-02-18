@@ -52,7 +52,6 @@ export default {
       let fileName = file[0].name;
       // 编译成base 64 文件
       let reader = new FileReader();
-      console.log(file[0])
       reader.readAsDataURL(file[0]);
       reader.onload = function () {
         _this.id += 1;

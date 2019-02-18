@@ -23,7 +23,8 @@ export default {
       { name: 'veeModal', url: '/view-modal' },
       { name: 'veeSlide', url: '/view-slide' },
       { name: 'veeScrollSlide', url: '/view-scroll-slide' },
-      { name: 'veeUploader', url: '/view-uploader' }
+      { name: 'veeUploader', url: '/view-uploader' },
+      { name: 'veeCountdown', url: '/view-countdown' }
     ]
   })
 }

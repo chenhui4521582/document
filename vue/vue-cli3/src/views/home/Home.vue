@@ -28,7 +28,7 @@
         </router-link>
       </div>
 
-      <h6 class="title">common 例子</h6>
+      <h6 class="title">实战例子</h6>
       <div class="list  border-bottom">
         <router-link v-for="(item) in examples" :key="item.name" :to="item.url">
           {{item.name}}
@@ -54,7 +54,8 @@ export default {
       { name: '插槽slot', url: '/vue/v-slot' },
       { name: 'v-model', url: '/vue/vmodel' },
       { name: 'component', url: '/vue/v-component' },
-      { name: 'transition', url: '/vue/v-transition' }
+      { name: 'transition', url: '/vue/v-transition' },
+      { name: 'createElement', url: '/vue/v-createElement' }
     ],
     common: [
       { name: '全局mixin', url: '/common/mixin' },
@@ -67,6 +68,9 @@ export default {
     examples: [
       { name: '选择进度', url: '/examples/selectPage' },
       { name: '登录拦截', url: '/examples/loginenter' },
+      { name: '毫秒倒计时', url: '/examples/countdown' },
+      { name: 'iframe 通讯', url: '/examples/iframe' },
+      { name: '选择城市', url: '/examples/city' },
     ]
   })
 }
