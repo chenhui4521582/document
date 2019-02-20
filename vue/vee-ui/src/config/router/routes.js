@@ -6,6 +6,7 @@ import veeSlide from '@/views/veeSlide'
 import veeScrollSlide from '@/views/veeScrollSlide'
 import veeUploader from '@/views/veeUploader'
 import veeCountdown from '@/views/veeCountdown'
+import veeGallery from '@/views/veeGallery'
 const routes = [
   {
     path: '/',
@@ -46,6 +47,11 @@ const routes = [
     path: '/view-countdown',
     name: 'view-countdown',
     component: veeCountdown
+  },
+  {
+    path: '/view-gallery',
+    name: 'view-gallery',
+    component: veeGallery
   }
 ]
 export default routes

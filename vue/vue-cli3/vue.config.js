@@ -1,7 +1,12 @@
 const ENV = process.env.NODE_ENV;
 const configureWebpack = {
   devServer: {
-    open: true
+    open: true,
+    proxy: {
+      '/json': {
+        target: 'http://localhost:8082'
+      }
+    },
   },
   resolve: {
     alias: {

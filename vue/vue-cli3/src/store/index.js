@@ -5,7 +5,9 @@ import state from './state'
 import mutations from './mutations'
 import getters from './getters'
 
-import module from './module/'
+import demo from './modules/demo'
+import travel from './modules/travel'
+
 Vue.use(Vuex)
 
 let store = new Vuex.Store({
@@ -14,7 +16,8 @@ let store = new Vuex.Store({
   mutations,
   getters,
   modules: {
-    module
+    demo,
+    travel
   }
 })
 

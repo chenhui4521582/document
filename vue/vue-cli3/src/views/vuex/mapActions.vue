@@ -26,7 +26,7 @@
       使用Actions 改变后的State数据 :
     </p>
     <p>
-      user = {{module.user}};  age = {{module.age}};
+      user = {{demo.user}};  age = {{demo.age}};
     </p>
   </div>
 </template>
@@ -36,12 +36,12 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'mapActions',
   computed: {
-    ...mapState(['module'])
+    ...mapState(['demo'])
   },
   methods: {
     ...mapActions({
-      updateAge: 'module/updateAge',
-      updateUser: 'module/updateUser'
+      updateAge: 'demo/updateAge',
+      updateUser: 'demo/updateUser'
     })
   },
   mounted () {

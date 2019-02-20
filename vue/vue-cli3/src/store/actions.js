@@ -1,4 +1,4 @@
-import Api from '@/config/service/Api'
+import Api from '@/Api'
 let host = process.env.VUE_APP_REQUESTHOST
 
 let actions = {

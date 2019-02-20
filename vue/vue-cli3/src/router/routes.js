@@ -2,7 +2,7 @@
 *   Component
 */
 import Home from '@view/home/Home.vue'
-import childBox from '@/config/router/childBox'
+import childBox from '@/router/childBox'
 
 import mixin from '@view/common/mixin.vue'
 import directive from '@view/common/directive.vue'
@@ -29,7 +29,9 @@ import my from '@view/examples/login-enter/components/my.vue'
 import login from '@view/examples/login-enter/components/login.vue'
 import examplesCountdown from '@view/examples/countdown/countdown.vue'
 import examplesIframe from '@view/examples/iframe/iframe.vue'
-import examplesCity from '@view/examples/city/city.vue'
+import travelHome from '@view/examples/travel/home/home.vue'
+import travelCity from '@view/examples/travel/city/city.vue'
+import travelDetail from '@view/examples/travel/detail/detail.vue'
 const routes = [
   {
     path: '/',
@@ -148,27 +150,9 @@ const routes = [
         path: '/examples/loginEnter/',
         component: childBox,
         children: [
-          {
-            path: '/',
-            name: 'loginEnter',
-            component: loginEnter
-          },
-          {
-            path: '/examples/loginEnter/my',
-            name: 'my',
-            component: my,
-            meta: {
-              login: true
-            }
-          },
-          {
-            path: '/examples/loginEnter/login',
-            name: 'login',
-            component: login,
-            meta: {
-              login: true
-            }
-          }
+          { path: '/', name: 'loginEnter', component: loginEnter },
+          { path: '/examples/loginEnter/my', name: 'my', component: my, meta: { login: true } },
+          { path: '/examples/loginEnter/login', name: 'login', component: login, meta: { login: true } }
         ]
       },
       {
@@ -182,9 +166,13 @@ const routes = [
         component: examplesIframe
       },
       {
-        path: '/examples/city',
-        name: 'examples-city',
-        component: examplesCity
+        path: '/examples/travel',
+        component: childBox ,
+        children: [
+          { path: '/', component:travelHome, name: 'travel-home',},
+          { path: '/examples/travel/city', component:travelCity, name: 'travel-city'},
+          { path: '/examples/travel/detail/:id', component:travelDetail, name: 'travel-Detail'}
+        ]
       }
     ]
   }

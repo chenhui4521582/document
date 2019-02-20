@@ -24,7 +24,8 @@ export default {
       { name: 'veeSlide', url: '/view-slide' },
       { name: 'veeScrollSlide', url: '/view-scroll-slide' },
       { name: 'veeUploader', url: '/view-uploader' },
-      { name: 'veeCountdown', url: '/view-countdown' }
+      { name: 'veeCountdown', url: '/view-countdown' },
+      { name: 'veeGallery', url: '/view-gallery' }
     ]
   })
 }

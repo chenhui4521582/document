@@ -3,12 +3,14 @@ import veeModal from './vee-modal/vee-modal'
 import veeSwitch from './vee-switch/vee-switch'
 import veeUploader from './vee-uploader/vee-uploader'
 import veeCountdown from './vee-countdown/vee-countdown'
+import veeGallery from './vee-gallery/vee-gallery'
 
 // 全局组件列表s
 const components = [
   veeModal,
   veeSwitch,
-  veeUploader
+  veeUploader,
+  veeGallery
 ]
 
 // 全局指令列表

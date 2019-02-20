@@ -50,47 +50,11 @@ export default {
 </script>
 
 <style lang="less">
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    .font-size(28);
-  }
-
-  ul,li,ol,li,p,h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  html,body{
-    margin: 0;
-    padding: 0;
-  }
-
-  table,thead,tbody,tr{
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-collapse:collapse;
-  }
-
-  th,td {
-    margin: 0;
-    padding: 0;
-  }
-
-  img{
-    max-width:100%;
-    display: block;
-    border: none;
-
-  }
 
   #app {
     width: 100%;
-    text-align: center;
     padding-bottom: 60px;
+    .font-size(28);
   }
   .FPS{
     position: fixed;
@@ -102,5 +66,4 @@ export default {
     width: auto;
     color: #000;
   }
-
 </style>
