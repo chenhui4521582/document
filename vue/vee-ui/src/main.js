@@ -12,21 +12,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-/*  render: function (h) {
-    return h(
-      'div',
-      {
-        attrs:{
-          'id': 'app'
-        }
-      },
-      [
-        h(
-          'router-view'
-        )
-      ]
-    )
-  }*/
-
-
 }).$mount('#app');

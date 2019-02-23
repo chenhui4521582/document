@@ -51,6 +51,7 @@ export default {
     border-radius: 3px;
     height: .52rem;
     input{
+      display: inline-block;
       padding-left: .1rem;
       border: none;
       height: 100%;

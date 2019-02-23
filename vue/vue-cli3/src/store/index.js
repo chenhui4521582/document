@@ -7,6 +7,7 @@ import getters from './getters'
 
 import demo from './modules/demo'
 import travel from './modules/travel'
+import sell from './modules/sell'
 
 Vue.use(Vuex)
 
@@ -17,7 +18,8 @@ let store = new Vuex.Store({
   getters,
   modules: {
     demo,
-    travel
+    travel,
+    sell
   }
 })
 

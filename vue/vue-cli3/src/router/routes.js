@@ -29,9 +29,7 @@ import my from '@view/examples/login-enter/components/my.vue'
 import login from '@view/examples/login-enter/components/login.vue'
 import examplesCountdown from '@view/examples/countdown/countdown.vue'
 import examplesIframe from '@view/examples/iframe/iframe.vue'
-import travelHome from '@view/examples/travel/home/home.vue'
-import travelCity from '@view/examples/travel/city/city.vue'
-import travelDetail from '@view/examples/travel/detail/detail.vue'
+
 const routes = [
   {
     path: '/',
@@ -169,11 +167,33 @@ const routes = [
         path: '/examples/travel',
         component: childBox ,
         children: [
-          { path: '/', component:travelHome, name: 'travel-home',},
-          { path: '/examples/travel/city', component:travelCity, name: 'travel-city'},
-          { path: '/examples/travel/detail/:id', component:travelDetail, name: 'travel-Detail'}
+          {
+            path: '/',
+            name: 'travel-home',
+            component: () => import('@view/examples/travel/home/home.vue'),
+          },
+          {
+            path: '/examples/travel/city',
+            name: 'travel-city',
+            component: () => import('@view/examples/travel/city/city.vue')
+          },
+          { path: '/examples/travel/detail/:id',
+            name: 'travel-Detail',
+            component: () => import('@view/examples/travel/detail/detail.vue')
+          }
         ]
-      }
+      },
+      {
+        path: '/examples/sell',
+        component: childBox ,
+        children: [
+          {
+            path: '/',
+            name: 'sell-home',
+            component: () => import('@view/examples/sell/home/home.vue'),
+          }
+        ]
+      },
     ]
   }
 ]
