@@ -13,8 +13,8 @@
 
 <script>
 export default {
-  name: 'Header'
-}
+  name: "Header"
+};
 </script>
 
 <style scoped lang="less">

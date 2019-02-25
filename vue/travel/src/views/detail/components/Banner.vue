@@ -2,7 +2,6 @@
   <div>
     <div class="banner" @click="showGallery">
       <img :src="img" alt="" />
-
       <div class="banner-info">
         <div class="banner-tittle">
           {{ this.sightName }}
@@ -25,7 +24,7 @@
 
 <script>
 export default {
-  name: 'detail-banner',
+  name: "detail-banner",
   data: () => ({
     visible: false
   }),
@@ -34,20 +33,20 @@ export default {
     imgs: {
       type: Array,
       default: () => {
-        return []
+        return [];
       }
     },
     sightName: String
   },
   methods: {
-    showGallery () {
-      this.visible = true
+    showGallery() {
+      this.visible = true;
     },
-    closedGallery () {
-      this.visible = false
+    closedGallery() {
+      this.visible = false;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
@@ -74,9 +73,10 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    top: 0;
     line-height: 0.6rem;
     color: #fff;
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    background: rgba(0, 0, 0, 0.5);
     .banner-tittle {
       flex: 1;
       font-size: 0.32rem;

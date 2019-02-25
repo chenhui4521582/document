@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 export default {
-  name: 'home-icons',
+  name: "home-icons",
   props: {
     iconList: Array
   },
@@ -29,19 +29,19 @@ export default {
     options: {}
   }),
   computed: {
-    pages () {
-      let pages = []
+    pages() {
+      let pages = [];
       this.iconList.map((item, index) => {
-        let page = Math.floor(index / 8)
+        let page = Math.floor(index / 8);
         if (!pages[page]) {
-          pages[page] = []
+          pages[page] = [];
         }
-        pages[page].push(item)
-      })
-      return pages
+        pages[page].push(item);
+      });
+      return pages;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">

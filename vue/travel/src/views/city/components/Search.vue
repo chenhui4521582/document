@@ -21,35 +21,35 @@
   </div>
 </template>
 <script>
-import betterScroll from 'better-scroll'
-import { mapActions } from 'vuex'
+import BetterScroll from "better-scroll";
+import { mapActions } from "vuex";
 export default {
-  name: 'Seach',
+  name: "Seach",
   props: {
     cities: Object
   },
   data: () => ({
-    keyword: '',
+    keyword: "",
     timer: null,
     list: []
   }),
   methods: {
     ...mapActions({
-      changeCity: 'travel/changeCity'
+      changeCity: "travel/changeCity"
     }),
-    handleCityClick (city) {
-      this.changeCity(city)
-      this.$router.push({ path: '/examples/travel' })
+    handleCityClick(city) {
+      this.changeCity(city);
+      this.$router.push({ path: "/examples/travel" });
     }
   },
-  mounted () {
-    this.scroll = new betterScroll(this.$refs.search)
+  mounted() {
+    this.scroll = new BetterScroll(this.$refs.search);
   },
   watch: {
-    keyword () {
-      let result = []
+    keyword() {
+      let result = [];
       if (this.timer) {
-        clearTimeout(this.timer)
+        clearTimeout(this.timer);
       }
       this.timer = setTimeout(() => {
         for (let i in this.cities) {
@@ -58,20 +58,20 @@ export default {
               item.spell.indexOf(this.keyword) > -1 ||
               item.name.indexOf(this.keyword) > -1
             ) {
-              result.push(item)
+              result.push(item);
             }
-          })
+          });
         }
-        this.list = result
-      }, 100)
+        this.list = result;
+      }, 100);
     }
   },
   computed: {
-    hasListData () {
-      return !this.list.length
+    hasListData() {
+      return !this.list.length;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">

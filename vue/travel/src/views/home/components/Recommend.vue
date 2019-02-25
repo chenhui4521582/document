@@ -22,11 +22,11 @@
 
 <script>
 export default {
-  name: 'home-recommend',
+  name: "home-recommend",
   props: {
     recommendList: Array
   }
-}
+};
 </script>
 
 <style scoped lang="less">

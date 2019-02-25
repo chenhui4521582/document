@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import CityHeader from './components/Header'
-import CitySearch from './components/Search'
-import CityList from './components/List'
-import CityAlphabet from './components/Alphabet'
+import CityHeader from "./components/Header";
+import CitySearch from "./components/Search";
+import CityList from "./components/List";
+import CityAlphabet from "./components/Alphabet";
 export default {
-  name: 'travel-city',
+  name: "travel-city",
   data: () => ({
     hotCites: [],
     cities: {},
@@ -33,24 +33,24 @@ export default {
     CityAlphabet
   },
   methods: {
-    handleLetterChange (e) {
-      this.letter = e
+    handleLetterChange(e) {
+      this.letter = e;
     },
-    getCity () {
-      this.$http.get('/json/city.json').then(res => {
-        this.getCitySucc(res)
-      })
+    getCity() {
+      this.$http.get("/json/city.json").then(res => {
+        this.getCitySucc(res);
+      });
     },
-    getCitySucc (res) {
-      let { hotCities, cities } = res.data.data
-      this.hotCites = hotCities
-      this.cities = cities
+    getCitySucc(res) {
+      let { hotCities, cities } = res.data.data;
+      this.hotCites = hotCities;
+      this.cities = cities;
     }
   },
-  mounted () {
-    this.getCity()
+  mounted() {
+    this.getCity();
   }
-}
+};
 </script>
 
 <style scoped lang="less"></style>

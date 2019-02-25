@@ -17,11 +17,11 @@
 
 <script>
 export default {
-  name: 'home-weekend',
+  name: "home-weekend",
   props: {
     weekendList: Array
   }
-}
+};
 </script>
 
 <style scoped lang="less">

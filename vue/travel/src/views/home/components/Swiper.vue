@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
 export default {
-  name: 'home-swiper',
+  name: "home-swiper",
   components: {
     swiper,
     swiperSlide
@@ -23,16 +23,16 @@ export default {
   },
   data: () => ({
     options: {
-      pagination: '.swiper-pagination',
+      pagination: ".swiper-pagination",
       autoplay: 3000
     }
   }),
   computed: {
-    showSwiper () {
-      return !!this.swiperList.length
+    showSwiper() {
+      return !!this.swiperList.length;
     }
   }
-}
+};
 </script>
 
 <style lang="less">

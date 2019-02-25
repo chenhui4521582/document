@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'AlphaBet',
+  name: "AlphaBet",
   props: {
     cities: Object
   },
@@ -26,44 +26,44 @@ export default {
     scrollY: 0,
     timer: null
   }),
-  updated () {
-    this.scrollY = this.$refs.letter[0].offsetTop
+  updated() {
+    this.scrollY = this.$refs.letter[0].offsetTop;
   },
   methods: {
-    handleChange (index) {
-      this.$emit('change', index)
+    handleChange(index) {
+      this.$emit("change", index);
     },
-    handleTouchStart () {
-      this.touchStatus = true
+    handleTouchStart() {
+      this.touchStatus = true;
     },
-    handleTouchMove (e) {
+    handleTouchMove(e) {
       if (this.touchStatus) {
         if (this.timer) {
-          clearInterval(this.timer)
+          clearInterval(this.timer);
         }
         this.timer = setTimeout(() => {
-          let touchY = e.touches[0].clientY
-          let index = Math.floor((touchY - this.scrollY) / 20)
+          let touchY = e.touches[0].clientY;
+          let index = Math.floor((touchY - this.scrollY) / 20);
           if (index >= 0 && index <= 21) {
-            this.$emit('change', index)
+            this.$emit("change", index);
           }
-        }, 16)
+        }, 16);
       }
     },
-    handleTouchEnd () {
-      this.touchStatus = false
+    handleTouchEnd() {
+      this.touchStatus = false;
     }
   },
   computed: {
-    list () {
-      let list = []
+    list() {
+      let list = [];
       for (let i in this.cities) {
-        list.push(i)
+        list.push(i);
       }
-      return list
+      return list;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">

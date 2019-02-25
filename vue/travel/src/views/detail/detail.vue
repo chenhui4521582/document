@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import DetailBanner from './components/Banner'
-import DetailList from './components/List'
-import DetailHeader from './components/Header'
+import DetailBanner from "./components/Banner";
+import DetailList from "./components/List";
+import DetailHeader from "./components/Header";
 export default {
-  name: 'city-detail',
+  name: "city-detail",
   components: {
     DetailBanner,
     DetailHeader,
@@ -25,36 +25,36 @@ export default {
   },
   data: () => ({
     imgs: [],
-    img: '',
-    sightName: '',
-    list: ''
+    img: "",
+    sightName: "",
+    list: ""
   }),
   methods: {
-    getDetailData () {
+    getDetailData() {
       this.$http
-        .get('/json/detail.json', { params: { id: this.$route.params.id } })
+        .get("/json/detail.json", { params: { id: this.$route.params.id } })
         .then(res => {
-          this.getDetailSucc(res)
-        })
+          this.getDetailSucc(res);
+        });
     },
-    getDetailSucc (res) {
-      console.log(res)
+    getDetailSucc(res) {
+      console.log(res);
       let {
         gallaryImgs = [],
-        bannerImg = '',
-        sightName = '',
+        bannerImg = "",
+        sightName = "",
         categoryList = []
-      } = res.data.data
-      this.imgs = gallaryImgs
-      this.img = bannerImg
-      this.sightName = sightName
-      this.list = categoryList
+      } = res.data.data;
+      this.imgs = gallaryImgs;
+      this.img = bannerImg;
+      this.sightName = sightName;
+      this.list = categoryList;
     }
   },
-  mounted () {
-    this.getDetailData()
+  mounted() {
+    this.getDetailData();
   }
-}
+};
 </script>
 
 <style scoped lang="less">

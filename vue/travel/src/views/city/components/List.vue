@@ -43,10 +43,10 @@
 </template>
 
 <script>
-import BetterScroll from 'better-scroll'
-import { mapState, mapActions } from 'vuex'
+import BetterScroll from "better-scroll";
+import { mapState, mapActions } from "vuex";
 export default {
-  name: 'List',
+  name: "List",
   props: {
     cities: Object,
     hotCities: Array,
@@ -57,37 +57,37 @@ export default {
   }),
   methods: {
     ...mapActions({
-      changeCity: 'travel/changeCity'
+      changeCity: "travel/changeCity"
     }),
-    goTop () {
-      this.scroll.scrollToElement(this.$refs.wrapper, '100')
-      this.showTop = false
+    goTop() {
+      this.scroll.scrollToElement(this.$refs.wrapper, "100");
+      this.showTop = false;
     },
-    handleCityClick (city) {
-      this.changeCity(city)
-      this.$router.push({ path: '/examples/travel' })
+    handleCityClick(city) {
+      this.changeCity(city);
+      this.$router.push({ path: "/examples/travel" });
     }
   },
-  mounted () {
-    this.scroll = new BetterScroll(this.$refs.wrapper)
+  mounted() {
+    this.scroll = new BetterScroll(this.$refs.wrapper);
   },
   watch: {
-    letter () {
+    letter() {
       if (this.letter == 0 || this.letter == null) {
-        this.showTop = false
+        this.showTop = false;
       } else {
-        this.showTop = true
+        this.showTop = true;
       }
       if (this.letter >= 0 && this.letter <= 21) {
-        let element = this.$refs.letter[this.letter]
-        this.scroll.scrollToElement(element)
+        let element = this.$refs.letter[this.letter];
+        this.scroll.scrollToElement(element);
       }
     }
   },
   computed: {
-    ...mapState({ travel: 'travel', dome: 'demo' })
+    ...mapState({ travel: "travel", dome: "demo" })
   }
-}
+};
 </script>
 
 <style scoped lang="less">

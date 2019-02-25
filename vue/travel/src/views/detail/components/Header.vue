@@ -19,35 +19,35 @@
 
 <script>
 export default {
-  name: 'DetailHeader',
-  data () {
+  name: "DetailHeader",
+  data() {
     return {
       showAbs: true,
       opacityStyle: {
         opacity: 0
       }
-    }
+    };
   },
   methods: {
-    handleScroll () {
-      const top = document.documentElement.scrollTop
+    handleScroll() {
+      const top = document.documentElement.scrollTop;
       if (top > 60) {
-        let opacity = top / 140
-        opacity = opacity > 1 ? 1 : opacity
-        this.opacityStyle = { opacity }
-        this.showAbs = false
+        let opacity = top / 140;
+        opacity = opacity > 1 ? 1 : opacity;
+        this.opacityStyle = { opacity };
+        this.showAbs = false;
       } else {
-        this.showAbs = true
+        this.showAbs = true;
       }
     }
   },
-  mounted () {
-    window.addEventListener('scroll', this.handleScroll)
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
   },
-  unmounted () {
-    window.removeEventListener('scroll', this.handleScroll)
+  unmounted() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
-}
+};
 </script>
 
 <style lang="less" scoped>

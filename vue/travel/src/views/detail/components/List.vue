@@ -14,11 +14,11 @@
 
 <script>
 export default {
-  name: 'DetailList',
+  name: "DetailList",
   props: {
     list: Array
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
