@@ -1,10 +1,10 @@
 <template>
   <div>
-    <router-link tag="div" to="/travel" class="header-abs" v-show="showAbs">
+    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
       <div class="iconfont header-abs-back">&#xe61d;</div>
     </router-link>
     <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
-      <router-link to="/examples/travel">
+      <router-link to="/">
         <div class="iconfont header-fixed-back">&#xe61d;</div>
       </router-link>
       景点详情
