@@ -7,7 +7,7 @@
       <span class="iconfont">&#xe61f;</span>
       <input type="text" placeholder="输入城市/景点/游玩主题" />
     </div>
-    <router-link to="/examples/travel/city">
+    <router-link to="/city">
       <div class="header-right">
         <span class="iconfont">&#xe65a;</span>
         <span>{{ city }}</span>

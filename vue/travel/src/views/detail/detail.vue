@@ -27,7 +27,7 @@ export default {
     imgs: [],
     img: "",
     sightName: "",
-    list: ""
+    list: []
   }),
   methods: {
     getDetailData() {

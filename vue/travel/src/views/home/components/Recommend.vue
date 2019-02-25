@@ -3,7 +3,7 @@
     <div class="title">热销推荐</div>
     <ul>
       <router-link
-        :to="{ path: `/examples/travel/detail/${item.id}` }"
+        :to="{ path: `/detail/${item.id}` }"
         tag="li"
         :key="item.id"
         v-for="item in recommendList"

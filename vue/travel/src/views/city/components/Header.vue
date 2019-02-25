@@ -1,6 +1,6 @@
 <template>
   <div class="city-header">
-    <router-link to="/examples/travel">
+    <router-link to="/">
       <div class="header-back">
         <span class="iconfont back">&#xe61d;</span>
       </div>

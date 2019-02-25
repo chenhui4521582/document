@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="items">
           <div class="item ">
-            <div class="btn">{{ travel.city }}</div>
+            <div class="btn">{{ city }}</div>
           </div>
         </div>
       </div>
@@ -36,9 +36,6 @@
         </div>
       </div>
     </div>
-    <div class="go-top iconfont" @click="goTop" v-show="showTop">
-      &#xe615;
-    </div>
   </div>
 </template>
 
@@ -59,13 +56,9 @@ export default {
     ...mapActions({
       changeCity: "travel/changeCity"
     }),
-    goTop() {
-      this.scroll.scrollToElement(this.$refs.wrapper, "100");
-      this.showTop = false;
-    },
     handleCityClick(city) {
       this.changeCity(city);
-      this.$router.push({ path: "/examples/travel" });
+      this.$router.push({ path: "/travel" });
     }
   },
   mounted() {
@@ -73,11 +66,6 @@ export default {
   },
   watch: {
     letter() {
-      if (this.letter == 0 || this.letter == null) {
-        this.showTop = false;
-      } else {
-        this.showTop = true;
-      }
       if (this.letter >= 0 && this.letter <= 21) {
         let element = this.$refs.letter[this.letter];
         this.scroll.scrollToElement(element);
@@ -85,7 +73,7 @@ export default {
     }
   },
   computed: {
-    ...mapState({ travel: "travel", dome: "demo" })
+    ...mapState(["city"])
   }
 };
 </script>
