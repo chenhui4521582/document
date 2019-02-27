@@ -1,15 +1,13 @@
 import { LocalStorage } from "@util/util";
-let defaultCity = '北京'
+let defaultCity = "北京";
 try {
-  if(LocalStorage.get('city')){
-    defaultCity = LocalStorage.get('city')
+  if (LocalStorage.get("city")) {
+    defaultCity = LocalStorage.get("city");
   }
-}catch (e) {
+} catch (e) {}
 
-}
-
-console.log(defaultCity)
+console.log(defaultCity);
 let state = {
   city: defaultCity
-}
-export default state
+};
+export default state;

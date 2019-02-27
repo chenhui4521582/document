@@ -1,54 +1,49 @@
-import Vue from 'vue'
+import Vue from "vue";
 export default Vue.extend({
-  data: () =>({
+  data: () => ({
     show: false
   }),
   methods: {
-    toggle () {
-      this.show = !this.show
+    toggle() {
+      this.show = !this.show;
     }
   },
-  render: function ( createElement ) {
+  render: function(createElement) {
     let vif = () => {
-      if (this.show){
-        return createElement('p','show值为true')
-      }else{
-        return createElement('p','show值为false')
+      if (this.show) {
+        return createElement("p", "show值为true");
+      } else {
+        return createElement("p", "show值为false");
       }
-    }
+    };
     return createElement(
-      'div',
+      "div",
       {
         attrs: {
-          'class': 'items'
+          class: "items"
         }
       },
       [
+        createElement("h1", "指令实现V-if"),
         createElement(
-          'h1',
-          '指令实现V-if'
-        ),
-        createElement(
-          'div',
+          "div",
           {
             attrs: {
-              'class': 'list'
+              class: "list"
             }
           },
-          [
-            vif()
-          ]
+          [vif()]
         ),
         createElement(
-          'button',
+          "button",
           {
             on: {
               click: this.toggle
             }
           },
-          '切换状态'
+          "切换状态"
         )
       ]
-    )
+    );
   }
-})
+});

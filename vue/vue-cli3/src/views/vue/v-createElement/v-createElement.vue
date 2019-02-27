@@ -3,12 +3,16 @@
     <p class="back">
       <router-link to="/">返回</router-link>
     </p>
-    <div class="menuList border-bottom" >
+    <div class="menuList border-bottom">
       <span
-        v-for="(item, i) in switchList" :key="i"
-        :class="[currentComponent == item.type ? 'active itemlist' : 'itemlist']"
-        @click="handleClick(item.type)">
-        {{item.name}}
+        v-for="(item, i) in switchList"
+        :key="i"
+        :class="[
+          currentComponent == item.type ? 'active itemlist' : 'itemlist'
+        ]"
+        @click="handleClick(item.type)"
+      >
+        {{ item.name }}
       </span>
     </div>
     <div class="example">
@@ -18,22 +22,22 @@
 </template>
 
 <script>
-import moreComponent from './component/moreComponent'
-import directiveVif from './component/directiveVif'
-import directiveVfor from './component/directiveVfor'
-import directiveVmodel from './component/directiveVmodel'
-import chat from './component/chat'
+import moreComponent from "./component/moreComponent";
+import directiveVif from "./component/directiveVif";
+import directiveVfor from "./component/directiveVfor";
+import directiveVmodel from "./component/directiveVmodel";
+import chat from "./component/chat";
 export default {
   name: "v-createElement",
   data: () => ({
     switchList: [
-      {name:'渲染多个相同的字组件', type: 'moreComponent'},
-      {name:'指令的实现v-if', type: 'directiveVif'},
-      {name:'指令的实现v-for', type: 'directiveVfor'},
-      {name:'指令的实现v-model', type: 'directiveVmodel'},
-      {name:'模拟聊天', type: 'chat'},
+      { name: "渲染多个相同的字组件", type: "moreComponent" },
+      { name: "指令的实现v-if", type: "directiveVif" },
+      { name: "指令的实现v-for", type: "directiveVfor" },
+      { name: "指令的实现v-model", type: "directiveVmodel" },
+      { name: "模拟聊天", type: "chat" }
     ],
-    currentComponent: 'moreComponent'
+    currentComponent: "moreComponent"
   }),
   components: {
     moreComponent,
@@ -43,37 +47,37 @@ export default {
     chat
   },
   methods: {
-    handleClick (current) {
-      this.currentComponent = current
+    handleClick(current) {
+      this.currentComponent = current;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.createElement{
+.createElement {
   .text-left();
-  .menuList{
+  .menuList {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    span{
+    span {
       padding: 5px 10px;
-      margin:5px;
+      margin: 5px;
       background: #999;
       color: #fff;
     }
-    .active{
+    .active {
       background: #666;
     }
   }
-  p{
-    padding: 10px 0
+  p {
+    padding: 10px 0;
   }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #ccc;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

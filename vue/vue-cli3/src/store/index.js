@@ -1,15 +1,15 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import actions from './actions'
-import state from './state'
-import mutations from './mutations'
-import getters from './getters'
+import Vue from "vue";
+import Vuex from "vuex";
+import actions from "./actions";
+import state from "./state";
+import mutations from "./mutations";
+import getters from "./getters";
 
-import demo from './modules/demo'
-import travel from './modules/travel'
-import sell from './modules/sell'
+import demo from "./modules/demo";
+import travel from "./modules/travel";
+import sell from "./modules/sell";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 let store = new Vuex.Store({
   state,
@@ -21,6 +21,6 @@ let store = new Vuex.Store({
     travel,
     sell
   }
-})
+});
 
-export default store
+export default store;

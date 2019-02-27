@@ -9,10 +9,8 @@
 
 <script>
 export default {
-  name: 'childrenComponent'
-}
+  name: "childrenComponent"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

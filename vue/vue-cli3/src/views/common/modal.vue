@@ -24,43 +24,42 @@
 <script>
 import VeeModal from "../../../../vee-ui/src/components/vee-modal/vee-modal";
 export default {
-  name: 'modal',
-  components: {VeeModal},
+  name: "modal",
+  components: { VeeModal },
   data: () => ({
     visible: false,
     options: {}
   }),
   methods: {
-    openModal () {
+    openModal() {
       this.options = {
-        title: '提示'
-      }
-      this.visible = true
+        title: "提示"
+      };
+      this.visible = true;
     },
-    modalCancel () {
-      this.visible = false
+    modalCancel() {
+      this.visible = false;
     },
-    modalConfirm () {
-      this.visible = false
+    modalConfirm() {
+      this.visible = false;
     }
   }
-
-}
+};
 </script>
 
 <style scoped lang="less">
-.modal{
+.modal {
   .text-left();
-  p{
+  p {
     padding: 10px 0;
-  span{
-    color: #0a8cff;
+    span {
+      color: #0a8cff;
+    }
   }
-  }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #f1f1f1;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

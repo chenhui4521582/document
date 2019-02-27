@@ -1,27 +1,27 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import routes from './routes'
-import {Cookie} from '@util/util'
+import Vue from "vue";
+import Router from "vue-router";
+import routes from "./routes";
+import { Cookie } from "@util/util";
 
-Vue.use(Router)
+Vue.use(Router);
 const vueRouter = new Router({
-  mode: 'hash',
+  mode: "hash",
   routes
 });
 
 vueRouter.beforeEach((to, from, next) => {
-  let formWorld = to.path || '' ;
+  let formWorld = to.path || "";
   let needLogin = to.meta.login ? to.meta.login : false;
-  let isLogin = Cookie.get('user');
-  if(needLogin){
-    if(isLogin){
+  let isLogin = Cookie.get("user");
+  if (needLogin) {
+    if (isLogin) {
       next();
-    }else{
-      next({path:'/examples/loginEnter/login',query:{formWorld}})
+    } else {
+      next({ path: "/examples/loginEnter/login", query: { formWorld } });
     }
-  }else{
+  } else {
     next();
   }
-})
+});
 
-export default vueRouter
+export default vueRouter;

@@ -1,17 +1,19 @@
 <template>
-<div class="login-enter">
-  <router-link :to="{path: '/examples/loginEnter/my'}">用户中心</router-link>
-</div>
+  <div class="login-enter">
+    <router-link :to="{ path: '/examples/loginEnter/my' }"
+      >用户中心</router-link
+    >
+  </div>
 </template>
 
 <script>
 export default {
-  name: "LoginEnter",
-}
+  name: "LoginEnter"
+};
 </script>
 
 <style scoped lang="less">
-.login-enter{
+.login-enter {
   .text-left();
 }
 </style>

@@ -10,35 +10,35 @@
       示例：
     </p>
     <p>
-      <img src="../../assets/img/dirictive.png" alt="">
+      <img src="../../assets/img/dirictive.png" alt="" />
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'directive',
-  data () {
+  name: "directive",
+  data() {
     return {
-      message: 'Hi, W3cplus.com'
-    }
+      message: "Hi, W3cplus.com"
+    };
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.directive{
+.directive {
   .text-left();
-  p{
+  p {
     padding: 10px 0;
-    span{
+    span {
       color: #0a8cff;
     }
   }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #f1f1f1;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

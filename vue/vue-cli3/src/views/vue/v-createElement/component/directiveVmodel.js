@@ -1,53 +1,44 @@
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
   data: () => ({
-    value: ''
+    value: ""
   }),
   methods: {
-    handleChange (e) {
-      this.value = e.target.value
+    handleChange(e) {
+      this.value = e.target.value;
     }
   },
-  render: function ( createElement ) {
+  render: function(createElement) {
     return createElement(
-      'div',
+      "div",
       {
         attrs: {
-          'class': 'items'
+          class: "items"
         }
       },
       [
+        createElement("h1", "指令实现V-model"),
         createElement(
-          'h1',
-          '指令实现V-model'
-        ),
-        createElement(
-          'div',
+          "div",
           {
             attrs: {
-              'class': 'list'
+              class: "list"
             }
           },
           [
-            createElement(
-              'input',
-              {
-                attrs:{
-                  value: this.value,
-                },
-                on: {
-                  input: this.handleChange
-                }
+            createElement("input", {
+              attrs: {
+                value: this.value
+              },
+              on: {
+                input: this.handleChange
               }
-            ),
-            createElement(
-              'p',
-              this.value
-            )
+            }),
+            createElement("p", this.value)
           ]
         )
       ]
-    )
+    );
   }
-})
+});
