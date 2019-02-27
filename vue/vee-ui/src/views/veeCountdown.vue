@@ -1,11 +1,11 @@
 <template>
-<div class="countdown">
-  <div class="back">
-    <router-link to="/" class="back">返回</router-link>
+  <div class="countdown">
+    <div class="back">
+      <router-link to="/" class="back">返回</router-link>
+    </div>
+    <p v-TimeCountdown="time"></p>
+    <button @click="reset">重置</button>
   </div>
-  <p v-TimeCountdown="time"></p>
-  <button @click="reset">重置</button>
-</div>
 </template>
 
 <script>
@@ -15,18 +15,18 @@ export default {
     time: new Date().getTime() + 10000
   }),
   methods: {
-    reset () {
-      this.time = new Date().getTime() + 10000
+    reset() {
+      this.time = new Date().getTime() + 10000;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.back{
+.back {
   .font-size(30);
   text-align: left;
-  a{
+  a {
     display: inline-block;
     padding: 0 20px;
     height: 30px;

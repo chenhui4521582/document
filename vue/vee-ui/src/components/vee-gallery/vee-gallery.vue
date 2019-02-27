@@ -2,8 +2,8 @@
   <div class="gallery" @click="handleClosed" v-if="visible">
     <div class="wrapper" @click.stop>
       <swiper :options="swiperOptions">
-        <swiper-slide v-for="(img,index) in imgs" :key="index">
-          <img :src="img" alt="" class="gallary-img">
+        <swiper-slide v-for="(img, index) in imgs" :key="index">
+          <img :src="img" alt="" class="gallary-img" />
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
@@ -11,55 +11,55 @@
   </div>
 </template>
 <script>
-import { swiper, swiperSlide} from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
 export default {
-  name: 'vee-gallery',
-  components:{
-	swiper,
-	swiperSlide
+  name: "vee-gallery",
+  components: {
+    swiper,
+    swiperSlide
   },
   props: {
-	visible: {
+    visible: {
       typ: Boolean,
       default: false
     },
     imgs: {
-	  type: Array,
+      type: Array,
       default: () => {
-        return []
+        return [];
       },
       required: true
     },
     options: {
-	  type: Object,
+      type: Object,
       default: () => ({})
     }
   },
   computed: {
-    swiperOptions () {
+    swiperOptions() {
       let defaultOptions = {
-		observer: true,
-		observeParents: true,
-		paginationType: 'fraction',
-		pagination: '.swiper-pagination'
-      }
-      return Object.assign(this.options,defaultOptions);
+        observer: true,
+        observeParents: true,
+        paginationType: "fraction",
+        pagination: ".swiper-pagination"
+      };
+      return Object.assign(this.options, defaultOptions);
     }
   },
   methods: {
-	handleClosed(){
-	  this.$emit('galleryClosed')
+    handleClosed() {
+      this.$emit("galleryClosed");
     }
   }
-}
+};
 </script>
 
 <style lang="less">
-.gallery .swiper-container{
+.gallery .swiper-container {
   overflow: inherit;
 }
-.gallery{
+.gallery {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,15 +70,15 @@ export default {
   top: 0;
   bottom: 0;
   background: #000;
-  .wrapper{
+  .wrapper {
     height: 0;
     width: 100%;
     padding-bottom: 100%;
   }
-  .gallary-img{
+  .gallary-img {
     width: 100%;
   }
-  .swiper-pagination{
+  .swiper-pagination {
     color: #fff;
     bottom: -2rem;
   }

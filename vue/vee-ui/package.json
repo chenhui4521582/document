@@ -15,6 +15,9 @@
   "author": "chenhui",
   "license": "MIT",
   "dependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4",
     "vue": "^2.5.21",
     "vue-awesome-swiper": "^2.6.7",
     "vue-router": "^3.0.1",
