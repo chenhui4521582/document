@@ -171,6 +171,11 @@ const routes = [
         path: "/examples/iframe",
         name: "examples-iframe",
         component: examplesIframe
+      },
+      {
+        path: "/examples/turntable",
+        name: "turntable",
+        component: () => import("@view/examples/turntable/turntable")
       }
     ]
   }

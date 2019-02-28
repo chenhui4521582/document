@@ -70,8 +70,8 @@ export default {
       { name: "登录拦截", url: "/examples/loginenter" },
       { name: "毫秒倒计时", url: "/examples/countdown" },
       { name: "iframe 通讯", url: "/examples/iframe" },
-      { name: "去哪儿", url: "/examples/travel" },
-      { name: "饿了吗", url: "/examples/sell" }
+      { name: "大转盘", url: "/examples/turntable" },
+      { name: "跑马灯", url: "/examples/horn" }
     ]
   })
 };

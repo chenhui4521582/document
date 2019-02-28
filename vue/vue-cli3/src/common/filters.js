@@ -2,7 +2,7 @@ export default [
   {
     name: "formatTime",
     method: (date, type) => {
-      if (data && date instanceof Date ) {
+      if (data && date instanceof Date) {
         date = data.getTime();
       } else {
         date = new Date(date);
