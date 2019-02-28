@@ -9,7 +9,7 @@
         <div class="turntable-bg">
           <img src="./img/bg.png" alt="" class="turntable-bg" />
         </div>
-        <div class="turntable-point" @click="start(1)">
+        <div class="turntable-point" @click="start(3)">
           <img src="./img/trun.png" alt="" />
         </div>
         <div class="turntable-rotate" ref="turntable">
@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  name: "turntable",
   data: () => ({
     prize: [
       { name: "5元话费", img: require("./img/5hfq.png") },

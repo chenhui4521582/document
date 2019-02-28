@@ -176,6 +176,11 @@ const routes = [
         path: "/examples/turntable",
         name: "turntable",
         component: () => import("@view/examples/turntable/turntable")
+      },
+      {
+        path: "/examples/horn",
+        name: "holn",
+        component: () => import("@view/examples/horn/horn")
       }
     ]
   }
