@@ -7,6 +7,8 @@ import veeScrollSlide from "@/views/veeScrollSlide";
 import veeUploader from "@/views/veeUploader";
 import veeCountdown from "@/views/veeCountdown";
 import veeGallery from "@/views/veeGallery";
+import veeTurntable from "@/views/veeTurntable";
+import veeHorn from "@/views/veeHorn";
 const routes = [
   {
     path: "/",
@@ -52,6 +54,16 @@ const routes = [
     path: "/view-gallery",
     name: "view-gallery",
     component: veeGallery
+  },
+  {
+    path: "/view-horn",
+    name: "view-horn",
+    component: veeTurntable
+  },
+  {
+    path: "/view-horn",
+    name: "view-turntable",
+    component: veeHorn
   }
 ];
 export default routes;
