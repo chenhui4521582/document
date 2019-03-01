@@ -44,18 +44,22 @@ export default {
           let offsetWidth = ~~item.offsetWidth;
           width += offsetWidth;
         });
-
+      let lastTime = 0;
       this.timer && cancelAnimationFrame(this.timer);
-
       let fn = () => {
-        left++;
-        if (left == Math.floor(width - boxWidth)) {
-          left = 0;
+        lastTime++;
+        if (lastTime == 5) {
+          left++;
+          if (left == Math.floor(width - boxWidth)) {
+            left = 0;
+          }
+          this.css = {
+            width: `${width}px`,
+            left: `-${left}px`
+          };
+          lastTime = 0;
         }
-        this.css = {
-          width: `${width}px`,
-          left: `-${left}px`
-        };
+
         this.timer = requestAnimationFrame(fn);
       };
       this.timer = requestAnimationFrame(fn);
