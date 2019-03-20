@@ -1,6 +1,6 @@
 <template>
   <div class="home-tab">
-    <router-link tag="div" to="/goods" class="item border-bottom">商品</router-link>
+    <router-link tag="div" to="/" class="item border-bottom">商品</router-link>
     <router-link tag="div" to="/comment" class="item border-bottom">评价</router-link>
     <router-link tag="div" to="/store" class="item border-bottom">商家</router-link>
   </div>

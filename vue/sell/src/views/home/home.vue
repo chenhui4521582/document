@@ -1,35 +1,33 @@
 <template>
 <div class="home">
-  <home-header :seller="seller"></home-header>
-  <home-horn :bulletin="bulletin"></home-horn>
+  <home-header></home-header>
+  <home-horn></home-horn>
   <home-tab></home-tab>
   <router-view></router-view>
 </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import HomeHeader from './components/Header'
 import HomeHorn from './components/Horn'
 import HomeTab from './components/Tab'
 export default {
   name: 'home',
   data: () => ({
-    seller: {},
     alertShow: false,
-    changeFile: '',
-    bulletin: ''
+    changeFile: ''
   }),
   components: {
     HomeHeader,
     HomeHorn,
     HomeTab
   },
+  methods: {
+    ...mapActions(['GETSTOREDATA'])
+  },
   created () {
-    this.$http.get('./json/data.json').then(res => {
-      res = res.data
-      this.seller = res.seller
-      this.bulletin = res.seller.bulletin
-    })
+    this.GETSTOREDATA()
   },
   mounted () {
 

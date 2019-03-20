@@ -33,11 +33,9 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'home-header',
-  props: {
-    seller: Object
-  },
   data: () => ({
     iconList: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
     detailShow: false
@@ -51,6 +49,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['seller']),
     preferentialIcon () {
       if (this.seller.supports) {
         if (this.seller.supports[0]) {

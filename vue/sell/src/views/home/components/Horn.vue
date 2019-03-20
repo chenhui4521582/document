@@ -1,18 +1,17 @@
 <template>
   <div class="home-horn">
     <span class="horn-title"></span>
-    <span class="horn-center">{{this.bulletin}}</span>
+    <span class="horn-center">{{ seller.bulletin }}</span>
     <span class="iconfont">&#xe61e;</span>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'home-horn',
-  props: {
-    bulletin: String
-  },
   computed: {
+    ...mapState(['seller']),
     hasBulletin () {
       return !!this.hasBulletin
     }

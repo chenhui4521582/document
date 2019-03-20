@@ -5,7 +5,7 @@ export default [
     component: () => import('@/views/home/home'),
     children: [
       {
-        path: '/goods',
+        path: '/',
         name: 'goods',
         component: () => import('@/views/goods/goods')
       },
