@@ -4,31 +4,31 @@
       <router-link to="/">返回</router-link>
     </p>
 
-    <button @click="toggle" :class="[isShow? 'toggle-btn is-show' : 'toggle-btn is-hidden']">{{isShow ? '显示' : '隐藏'}}</button>
+    <button
+      @click="toggle"
+      :class="[isShow ? 'toggle-btn is-show' : 'toggle-btn is-hidden']"
+    >
+      {{ isShow ? "显示" : "隐藏" }}
+    </button>
     <transition name="fade" mode="in-out">
-      <p v-if="isShow" class="alert-info" :key="'info'">{{alertInfoMsg}}</p>
-      <p v-else="!isShow" class="alert-error" :key="'error'">{{alertErrorMsg}}</p>
+      <p v-if="isShow" class="alert-info" :key="'info'">{{ alertInfoMsg }}</p>
+      <p v-else="!isShow" class="alert-error" :key="'error'">
+        {{ alertErrorMsg }}
+      </p>
     </transition>
-
 
     <p class="border-bottom"></p>
 
     <p class="title">滚动</p>
 
     <div class="scrollComponent">
-      <div class="scroll-leave">
-
-      </div>
-      <div class="scroll-center">
-
-      </div>
-      <div class="scroll-enter">
-
-      </div>
+      <div class="scroll-leave"></div>
+      <div class="scroll-center"></div>
+      <div class="scroll-enter"></div>
     </div>
     <ul class="scroll">
       <transition-group name="scroll" mode="out-in">
-        <li v-for="item in list" :key="item.id">{{item.value}}</li>
+        <li v-for="item in list" :key="item.id">{{ item.value }}</li>
       </transition-group>
     </ul>
     <p>
@@ -39,97 +39,94 @@
 </template>
 
 <script>
-function shuffle(arr) {
+function shuffle(arr) {
   var result = [],
     random;
   while (arr.length > 0) {
     random = Math.floor(Math.random() * arr.length);
-    result.push(arr[random])
-    arr.splice(random, 1)
+    result.push(arr[random]);
+    arr.splice(random, 1);
   }
 }
 
-
-
 export default {
-  name: 'v-transition',
+  name: "v-transition",
   data: () => ({
     isShow: true,
     alertInfoMsg: "👻👻👻Hello! W3cplus.com!👻👻👻",
     alertErrorMsg: "💩💩💩Goodbye! W3cplus.com!💩💩💩",
     list: [
-      {id:1, value: '很好很强大很厉害'},
-      {id:2, value: '做好做大做强'},
-      {id:3, value: '狗屎难听'},
-      {id:4, value: '很赞66666'}
+      { id: 1, value: "很好很强大很厉害" },
+      { id: 2, value: "做好做大做强" },
+      { id: 3, value: "狗屎难听" },
+      { id: 4, value: "很赞66666" }
     ]
   }),
   methods: {
-    toggle () {
-      this.isShow = !this.isShow
+    toggle() {
+      this.isShow = !this.isShow;
     },
-    scroll () {
-      this.list.splice(0,1)
-      this.list.push({id: this.list[2].id+1,value: '做好做大做强'});
+    scroll() {
+      this.list.splice(0, 1);
+      this.list.push({ id: this.list[2].id + 1, value: "做好做大做强" });
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-
-.scroll{
+.scroll {
   text-align: left;
-  ul{
+  ul {
     display: inline-block;
   }
-  li{
+  li {
     padding: 5px 15px;
-    border-radius:15px;
-    background: rgba(0,0,0,.5);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     margin-bottom: 10px;
   }
 }
 
-.fade-enter-active,.fade-leave-active{
+.fade-enter-active,
+.fade-leave-active {
   transition: all 0.5s ease-in-out;
 }
-.fade-leave{
-  opacity:1;
+.fade-leave {
+  opacity: 1;
   transform: translate(0, 0);
 }
-.fade-leave-to{
+.fade-leave-to {
   opacity: 0;
   transform: translate(50%, 0);
 }
-.fade-enter{
+.fade-enter {
   opacity: 0;
   transform: translate(50%, 0);
 }
-.fade-enter-to{
+.fade-enter-to {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-
-
-.scroll-enter,.scroll-leave-to{
+.scroll-enter,
+.scroll-leave-to {
   opacity: 0;
   transform: translateY(80px);
 }
-.scroll-leave-active,.scroll-enter-active{
-  transition: all .5s;
+.scroll-leave-active,
+.scroll-enter-active {
+  transition: all 0.5s;
 }
 
-
-
-.scrollBtn,.toggle-btn{
+.scrollBtn,
+.toggle-btn {
   border: 0;
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 14px;
-  margin:10px;
+  margin: 10px;
   color: #fff;
   display: inline-block;
   transition: all 0.28s ease;
@@ -148,27 +145,27 @@ export default {
 .is-hidden:hover {
   background-color: #ff6656;
 }
-.alert-info{
+.alert-info {
   color: #0c5460;
   background-color: #d1ecf1;
   border-color: #bee5eb;
 }
-.alert-error{
+.alert-error {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
-.transition{
-  .text{
+.transition {
+  .text {
     background: #00b3ee;
   }
-  p{
-    padding: 10px 0
+  p {
+    padding: 10px 0;
   }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #f1f1f1;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

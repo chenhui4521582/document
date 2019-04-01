@@ -12,16 +12,16 @@ export default {
       type: Boolean,
       default: false
     },
-    active:{
-      type:Boolean,
+    active: {
+      type: Boolean,
       default: false
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.btn{
+.btn {
   display: inline-block;
   padding: 5px 10px;
   background: #999;
@@ -29,10 +29,10 @@ export default {
   font-size: 14px;
   color: #fff;
   border: none;
-  &:hover{
+  &:hover {
     background: #00b3ee;
   }
-  &.active{
+  &.active {
     background: #00b3ee;
   }
 }

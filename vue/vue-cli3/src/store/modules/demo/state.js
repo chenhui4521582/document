@@ -1,4 +1,4 @@
 export default {
-  user: 'chenhui',
+  user: "chenhui",
   age: 28
-}
+};

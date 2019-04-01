@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -22,4 +23,15 @@
     color #2c3e50
     &.router-link-exact-active
       color #42b983
+=======
+<div id="app">
+  <router-view/>
+</div>
+</template>
+
+<style lang="less">
+#app {
+  font-size:.28rem;
+}
+>>>>>>> d50bfcc43746ea5ba9f1c88b0027120274183604
 </style>

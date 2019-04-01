@@ -4,7 +4,7 @@
       <router-link to="/">返回</router-link>
     </p>
     <p class="title">
-      vuex   slot
+      vuex slot
     </p>
     <p>
       说明: 往children 组件内部插入html元素
@@ -13,7 +13,7 @@
       示例：
     </p>
     <p>
-      <img src="../../../assets/img/slot.png" alt="">
+      <img src="../../../assets/img/slot.png" alt="" />
     </p>
     <childrenComponent>
       <p slot="slot_header">这是插入头部</p>
@@ -24,25 +24,25 @@
 </template>
 
 <script>
-import childrenComponent from './childrenComponent'
+import childrenComponent from "./childrenComponent";
 export default {
-  name: 'v-slot',
+  name: "v-slot",
   components: {
     childrenComponent
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.component_slot{
+.component_slot {
   .text-left();
-  p{
-    padding: 10px 0
+  p {
+    padding: 10px 0;
   }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #f1f1f1;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

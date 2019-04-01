@@ -4,23 +4,23 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header border-bottom">
-          <p class="title">{{modal.title}}</p>
+          <p class="title">{{ modal.title }}</p>
           <a href="javascript(0)" @click="modalCancel"></a>
         </div>
         <div class="modal-body">
           <slot name="body"></slot>
         </div>
         <div class="modal-footer border-top">
-          <a href="javascript:void(0)"
-             class="confirm"
-             v-if="modal.showCancelButton"
-             @click="modalCancel">
-            {{modal.cancelButtonText}}
+          <a
+            href="javascript:void(0)"
+            class="confirm"
+            v-if="modal.showCancelButton"
+            @click="modalCancel"
+          >
+            {{ modal.cancelButtonText }}
           </a>
-          <a href="javascript:void(0)"
-             class="cancel"
-             @click="modalConfirm" >
-            {{modal.confirmButtonText}}
+          <a href="javascript:void(0)" class="cancel" @click="modalConfirm">
+            {{ modal.confirmButtonText }}
           </a>
         </div>
       </div>
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'vee-modal',
+  name: "vee-modal",
   props: {
     visible: {
       typ: Boolean,
@@ -42,43 +42,51 @@ export default {
     }
   },
   methods: {
-    modalCancel () {
-      this.$emit('modalCancel')
+    modalCancel() {
+      this.$emit("modalCancel");
     },
-    modalConfirm () {
-      this.$emit('modalConfirm')
+    modalConfirm() {
+      this.$emit("modalConfirm");
     }
   },
   computed: {
-    modal () {
-      let modal = this.options; let extendModl
+    modal() {
+      let modal = this.options;
+      let extendModl;
       if (modal) {
         extendModl = {
-          title: modal.title || '提示',
-          showCancelButton: typeof modal.showCancelButton === 'undefined' ? true : modal.showCancelButton,
-          cancelButtonText: modal.cancelButtonText ? module.cancelButtonText : '取消',
-          confirmButtonText: modal.canfirmButtonText ? modal.confirmButtonText : '确定'
-        }
+          title: modal.title || "提示",
+          showCancelButton:
+            typeof modal.showCancelButton === "undefined"
+              ? true
+              : modal.showCancelButton,
+          cancelButtonText: modal.cancelButtonText
+            ? module.cancelButtonText
+            : "取消",
+          confirmButtonText: modal.canfirmButtonText
+            ? modal.confirmButtonText
+            : "确定"
+        };
       } else {
         extendModl = {
           title: modal.title,
           showCancelButton: true,
-          cancelButtonText: '取消',
-          confirmButtonText: '确定'
-        }
+          cancelButtonText: "取消",
+          confirmButtonText: "确定"
+        };
       }
-      return extendModl
+      return extendModl;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.modal{
+.modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -88,7 +96,7 @@ export default {
   height: 100%;
   overflow: hidden;
   z-index: 9999;
-  .caver{
+  .caver {
     position: absolute;
     left: 0;
     top: 0;
@@ -96,10 +104,10 @@ export default {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 10;
   }
-  .modal-dialog{
+  .modal-dialog {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -112,33 +120,32 @@ export default {
     background: #fff;
     border-radius: 5px;
     z-index: 11;
-    .modal-content{
+    .modal-content {
       text-align: left;
-      padding: 0 ;
-      .modal-header{
+      padding: 0;
+      .modal-header {
         color: #666;
         overflow: hidden;
         padding-left: 10px;
-        p{
+        p {
           height: 34px;
           line-height: 34px;
-          font-size:16px;
+          font-size: 16px;
         }
-
       }
-      .modal-body{
-        padding:0 10px;
+      .modal-body {
+        padding: 0 10px;
         min-height: 100px;
         color: #999;
-        >*{
-          font-size:14px;
+        > * {
+          font-size: 14px;
         }
       }
-      .modal-footer{
-        padding:5px 10px;
+      .modal-footer {
+        padding: 5px 10px;
         display: flex;
         justify-content: flex-end;
-        a{
+        a {
           display: block;
           height: 24px;
           line-height: 26px;
@@ -148,24 +155,22 @@ export default {
           color: #fff;
           padding: 0 10px;
         }
-        >*{
+        > * {
           font-size: 13px;
         }
-        .confirm{
+        .confirm {
           background: #f56c6c;
           margin-right: 10px;
         }
-        .cancel{
+        .cancel {
           background: #67c23a;
-
         }
       }
     }
-
   }
 }
-.modal-in{
-  animation: modal-in .35s linear;
+.modal-in {
+  animation: modal-in 0.35s linear;
 }
 
 @keyframes modal-in {

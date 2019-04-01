@@ -1,59 +1,59 @@
 <template>
-<div class="p-c">
-  <p>我是父组件</p>
-  <p>父组件message {{message}}</p>
-  <children />
+  <div class="p-c">
+    <p>我是父组件</p>
+    <p>父组件message {{ message }}</p>
+    <children />
 
-  <p>
-    父截图
-    <img src="../../../../assets/img/$parent.png" alt="">
-  </p>
-  <p>
-    子截图
-    <img src="../../../../assets/img/$parent1.png" alt="">
-  </p>
-</div>
+    <p>
+      父截图
+      <img src="../../../../assets/img/$parent.png" alt="" />
+    </p>
+    <p>
+      子截图
+      <img src="../../../../assets/img/$parent1.png" alt="" />
+    </p>
+  </div>
 </template>
 
 <script>
-import children from './children'
+import children from "./children";
 export default {
   name: "parent",
-  data(){
-    return{
-      message: '111111'
-    }
+  data() {
+    return {
+      message: "111111"
+    };
   },
   components: {
     children
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.p-c{
+.p-c {
   .text-left();
-  .menuList{
+  .menuList {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    span{
+    span {
       padding: 5px 10px;
-      margin:5px;
+      margin: 5px;
       background: #999;
       color: #fff;
     }
-    .active{
+    .active {
       background: #666;
     }
   }
-  p{
-    padding: 10px 0
+  p {
+    padding: 10px 0;
   }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #ccc;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

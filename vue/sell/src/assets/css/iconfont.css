@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot?t=1551939808377'); /* IE9 */
+  src: url('../iconfont/iconfont.eot?t=1551939808377#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPYAAsAAAAACDgAAAOKAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqDUIMRATYCJAMUCwwABCAFhG0HThsjB8gekiQBAHAWACoPgATB8zRXvj8zyWUnVyDkbIkVo17FrqrngG1adtVztab3IdBxPysLLBkUOrr+7wPdz2VD4+sBhQIWPr5VAdUqUpnawgYcaxoQpyP8/987/aMsgXntUbmMuWxMW5s6AUYTKNA9cGyCAikwbhi7oCXuhwCW9vShTJ2+vsVSGMxhAsjeXSZnqYwR05AoBAh+xVyD3McjUDfUN+Be8Hn5zWAJQOFpzIMWbl/Q2XSs/qjryEWs1RHRdHaALQIN9IVhQA5XOvcSjcJ9iWLV38WYCMMSoFBx+5jH5R9150CTHkhtLSVT/PEUBsTHjC8GYCKMGIhVB0FDzBEE4jKCgh918YfZywPAAgngEpAB09rCodAIuvgCLRLtE5vKW8sr2ivKmstKG2usWCwhoYSbyn+WV/xWYd/Br9OljaW1/DaXKG+tKv6QTxZ61Hufi7JHHrZ4+KT59svUp+fNtunnzz7farGjkH/ZllQ2yt0qJPO7ya5aet3yeW5YAyl+0DzZYkX+Y6bNmitJfrH1lx+DKa7nzL9/JmXxPL4rTWLtSx6+LLVTcReqYh07mipL37EjluKUem/PvNGVlRrK3lA+lOKstpno1ZDhQ16hS/C/B2XduPTGeZ2DnPdvbO8xA+viJd3/7C5SGg6l58L034qFuft1afmy68kjd5742sH2v+OElu5TJ6Ltbx81nZlrfK3x8a5l6peBTrAOK2GAq9CfdS+Yc1qBPHBlOtJ9/ut3+Pqe/rChwdj/QWgAqLypepDlIoOO4Oeo6Cz6i6KOVUaTmCbPKOWOUOnlMZAoAIo1WODfeRvzOY26WecgCEFGxEBRRDvQBHTFDbUveIQMBZ+ACWDpw9LikCZIoohJAL05AiA05BUU9SmApiFvuKF+gEdzOuDTUDRYlkuTNUO6yy475TByQh0212CXJgLDtlAmTNxAs+RxmZYE9B2URdsHg/oPzMeWMEA5xYQjZXPkKBmwXQofpoPD0PMEHJTCQY0GdhKFowMGbK+608AW4bMMU5AgHALRAQ6pAdhoCAIMrz6RKbx/A8SkhAdHNlRUuXdAJEXs7oFhBhjqgC8pg04Vt3JMkTImIxCEAWAgEfgAi8COeFZYAITVvRwQDWIAa0AwZJRBVMvoqhxYXu2/4w7AYt7WEyVajHjiozdt1ROHt/mijPHDu0yL8kd2ijC0A7N/C5fEGAAA') format('woff2'),
+  url('../iconfont/iconfont.woff?t=1551939808377') format('woff'),
+  url('../iconfont/iconfont.ttf?t=1551939808377') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../iconfont/iconfont.svg?t=1551939808377#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e661";
+}
+
+.icon-remove:before {
+  content: "\e676";
+}
+
+.icon-right:before {
+  content: "\e61e";
+}
+
+.icon-shopping-cart:before {
+  content: "\e8c2";
+}
+

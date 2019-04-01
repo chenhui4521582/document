@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "better-scroll": "^1.14.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "fastclick": "^1.0.6",
+    "prettier": "^1.16.4",
     "vee-ui": "^1.0.3",
     "vue": "^2.5.21",
     "vue-awesome-swiper": "^2.6.7",

@@ -3,12 +3,16 @@
     <p class="back">
       <router-link to="/">返回</router-link>
     </p>
-    <div class="menuList border-bottom" >
+    <div class="menuList border-bottom">
       <span
-        v-for="(item, i) in switchList" :key="i"
-        :class="[currentComponent == item.type ? 'active itemlist' : 'itemlist']"
-        @click="handleClick(item.type)">
-        {{item.name}}
+        v-for="(item, i) in switchList"
+        :key="i"
+        :class="[
+          currentComponent == item.type ? 'active itemlist' : 'itemlist'
+        ]"
+        @click="handleClick(item.type)"
+      >
+        {{ item.name }}
       </span>
     </div>
     <div class="example">
@@ -18,26 +22,26 @@
 </template>
 
 <script>
-import childrenParent from './children-parent/parent'
-import parentChildren from './parent-children/parent'
-import childrenChildren from './children-children/parent'
-import parent from './$parent/parent'
-import children from './$children/parent'
-import VModel from './v-model/parent'
+import childrenParent from "./children-parent/parent";
+import parentChildren from "./parent-children/parent";
+import childrenChildren from "./children-children/parent";
+import parent from "./$parent/parent";
+import children from "./$children/parent";
+import VModel from "./v-model/parent";
 export default {
-  name: 'v-component',
+  name: "v-component",
   data: () => ({
     switchList: [
-      {name:'父传子', type:'parentChildren'},
-      {name:'子传父', type:'childrenParent'},
-      {name:'子传子', type:'childrenChildren'},
-      {name:'this.$parent', type:'parent'},
-      {name:'this.$children', type:'children'},
-      {name:'v-model', type:'VModel'},
+      { name: "父传子", type: "parentChildren" },
+      { name: "子传父", type: "childrenParent" },
+      { name: "子传子", type: "childrenChildren" },
+      { name: "this.$parent", type: "parent" },
+      { name: "this.$children", type: "children" },
+      { name: "v-model", type: "VModel" }
     ],
-    currentComponent: 'parent'
+    currentComponent: "parent"
   }),
-  components:{
+  components: {
     parent,
     children,
     childrenParent,
@@ -45,38 +49,38 @@ export default {
     childrenChildren,
     VModel
   },
-  methods:{
-    handleClick(type){
-      this.currentComponent=type;
+  methods: {
+    handleClick(type) {
+      this.currentComponent = type;
     }
   }
-}
+};
 </script>
 
 <style scoped lang="less">
-.component{
+.component {
   .text-left();
-  .menuList{
+  .menuList {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    span{
+    span {
       padding: 5px 10px;
-      margin:5px;
+      margin: 5px;
       background: #999;
       color: #fff;
     }
-    .active{
+    .active {
       background: #666;
     }
   }
-  p{
-    padding: 10px 0
+  p {
+    padding: 10px 0;
   }
-  .border-bottom{
+  .border-bottom {
     border-bottom: 1px solid #ccc;
   }
-  .title{
+  .title {
     text-align: center;
   }
 }

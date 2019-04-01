@@ -1,14 +1,13 @@
 export default {
   data: () => ({
-    message: 'mixin'
+    message: "mixin"
   }),
   methods: {
-    update (message) {
-      this.message = message
+    update(message) {
+      this.message = message;
     },
-    remove () {
-      this.message = ''
+    remove() {
+      this.message = "";
     }
   }
-}
-
+};

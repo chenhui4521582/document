@@ -5,9 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+<<<<<<< HEAD
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+=======
+    "lint": "vue-cli-service lint --fix"
+  },
+  "dependencies": {
+    "register-service-worker": "^1.5.2",
+>>>>>>> d50bfcc43746ea5ba9f1c88b0027120274183604
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -15,6 +22,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
+<<<<<<< HEAD
     "@vue/cli-service": "^3.4.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
@@ -22,6 +30,21 @@
     "eslint-plugin-vue": "^5.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+=======
+    "@vue/cli-plugin-pwa": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
+    "better-scroll": "^1.14.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "style-resources-loader": "^1.2.1",
+    "velocity-animate": "^1.5.2",
+    "vue-cli-plugin-style-resources-loader": "^0.1.3",
+>>>>>>> d50bfcc43746ea5ba9f1c88b0027120274183604
     "vue-template-compiler": "^2.5.21"
   }
 }
