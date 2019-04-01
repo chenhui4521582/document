@@ -102,7 +102,7 @@ let path = require('path'),
     },
     htmlArray = [
         {entry:'index',title:'首页'},
-        {entry:'ie',title:'ie升级'}
+        // {entry:'ie',title:'ie升级'}
     ];
     htmlArray.forEach(item=>{
         let {entry='',title=''} = item;
