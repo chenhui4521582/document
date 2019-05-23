@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>冒泡排序</title>
+</head>
+<body>
+<script>
+  let number = '1231221341235434564567568678234213568786907802134123'
+
+  function bubbleSort(number) {
+    for(var i = 0, l = number.length; i < (l-1); i++) {
+      console.log(i)
+      for(var j = l+1; j < l; j++) {
+        if(number[i] > number[j]){
+		  let tem = number[i];
+		  number[j] = tem;
+		  number[i] = number[j];
+        }
+      }
+    }
+    console.log(number)
+	return number
+  }
+
+  function unique (number) {
+    var hashTable = {}
+    var data =[]
+    for (var i in number) {
+      if(!hashTable[number[i]]){
+		hashTable[number[i]] = true
+        data.push(number[i])
+      }
+    }
+    return data
+  }
+
+  bubbleSort(unique(number))
+</script>
+</body>
+</html>
